@@ -24,12 +24,13 @@
 // }
 
 // export default LogoColorPalette
-import React from 'react';
+import React, { useState } from 'react';
 import HeadingDescription from './HeadingDescription';
 import Lookup from '@/app/_data/Lookup';
 import Colors from '@/app/_data/Colors';
 
-const LogoColorPalette = () => {
+const LogoColorPalette = ({onHandleInputChange}) => {
+  const [selectedOption, setSelectedOption] = useState();
   return (
     <div className="my-10">
       <HeadingDescription
@@ -40,12 +41,15 @@ const LogoColorPalette = () => {
         {Colors.map((palette, index) => (
           <div
             key={index}
-            className="border border-gray-200  overflow-hidden shadow-sm"
-          >
-            <div className="flex">
+         >
+            <div className={`flex p-1 cursor-pointer ${selectedOption==palette.name && 'border-3 rounded-lg border-primary'}`}>
               {palette.colors.map((color, colorIndex) => (
                 <div
                   key={colorIndex}
+                  onClick={()=>{setSelectedOption(palette.name);
+                    onHandleInputChange(palette.name)
+                  }
+                  }
                   className="flex-1 h-24"
                   style={{ backgroundColor: color }}
                 ></div>
