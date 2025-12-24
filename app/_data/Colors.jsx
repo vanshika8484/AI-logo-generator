@@ -19,6 +19,16 @@ export default[
             "#d45087"
         ]
     },
+    {
+    name: "Mint & Teal",
+    colors: [
+      "#04705bff",
+      "#00b894",
+       "#54f8c4ff",
+      "#96dba4ff",
+      "#cbfaceff"
+    ]
+  },
         {
         "name":"Sunset warmth",
         "colors":[
