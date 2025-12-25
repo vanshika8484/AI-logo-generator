@@ -24,15 +24,21 @@ const onHandleInputChange = (field, value) => {
     <div className='mt-28 border p-10 rounded-xl max-w-7xl mx-auto '>
         {
             step==1?
-            <LogoTitle onHandleInputChange={(value)=>onHandleInputChange('title',value)}/>:
+            <LogoTitle onHandleInputChange={(value)=>onHandleInputChange('title',value)}
+            formData={formData}
+            />:
             step==2?
-            <LogoDesc onHandleInputChange={(value)=>onHandleInputChange('desc',value)}/>:
+            <LogoDesc onHandleInputChange={(value)=>onHandleInputChange('desc',value)}
+             formData={formData}/>:
             step==3?
-            <LogoColorPalette onHandleInputChange={(value)=>onHandleInputChange('palette',value)}/>:
+            <LogoColorPalette onHandleInputChange={(value)=>onHandleInputChange('palette',value)}
+             formData={formData}/>:
             step==4?
-            <LogoDesigns onHandleInputChange={(value)=>onHandleInputChange('design',value)}/>:
+            <LogoDesigns onHandleInputChange={(value)=>onHandleInputChange('design',value)}
+             formData={formData}/>:
             step==5?
-            <LogoIdea onHandleInputChange={(value)=>onHandleInputChange('idea',value)}/>:
+            <LogoIdea onHandleInputChange={(value)=>onHandleInputChange('idea',value)}
+             formData={formData}/>:
             null
         }
         <div className='flex items-center justify-between'>
