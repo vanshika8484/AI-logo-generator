@@ -7,6 +7,7 @@ import LogoDesc from './components/LogoDesc'
 import LogoColorPalette from './components/LogoColorPalette'
 import LogoDesigns from './components/LogoDesigns'
 import LogoIdea from './components/LogoIdea'
+import PricingModel from './components/PricingModel'
 
 const page = () => {
     const [step, setStep] = useState(1);
@@ -39,7 +40,10 @@ const onHandleInputChange = (field, value) => {
             step==5?
             <LogoIdea onHandleInputChange={(value)=>onHandleInputChange('idea',value)}
              formData={formData}/>:
-            null
+             step==6?
+            <PricingModel onHandleInputChange={(value)=>onHandleInputChange('pricing',value)}
+             formData={formData}/>:
+             null
         }
         <div className='flex items-center justify-between'>
             {step!=1&&<Button variant='outline'onClick={()=>setStep(step-1)} className='cursor-pointer'><ArrowLeft />Previous</Button>}
