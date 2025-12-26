@@ -26,7 +26,7 @@ export default[
       "#00b894",
        "#54f8c4ff",
       "#96dba4ff",
-      "#cbfaceff"
+      "#cbfadefe"
     ]
   },
         {
