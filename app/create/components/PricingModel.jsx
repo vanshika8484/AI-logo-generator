@@ -8,6 +8,7 @@ import { SignInButton, useUser } from '@clerk/nextjs'
 
 const PricingModel = ({onHandleInputChange,formData}) => {
   const {user} = useUser()
+  
   useEffect(()=>{
     if(formData?.title&&typeof window!=='undefined'){
       localStorage.setItem('formData',JSON.stringify(formData))
