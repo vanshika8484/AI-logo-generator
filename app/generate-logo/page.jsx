@@ -2,7 +2,7 @@ import React from 'react'
 
 const GenerateLogo = () => {
   return (
-    <div>page</div>
+    <div>Generate Logo</div>
   )
 }
 
